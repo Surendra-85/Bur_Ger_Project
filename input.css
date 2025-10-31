@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Nunito:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap');
+
+
+@layer base{
+    html {
+        @apply scroll-smooth;
+    }
+    body{
+        @apply tracking-wider text-whiteColor bg-primaryColor font-dmsans dark:bg-darkColor;
+    }
+
+    section{
+        @apply pt-16 pb-4 md:pt-20;
+    }
+}
+@layer components{
+    .btn {
+        @apply inline-block px-8 py-3 text-sm text-center capitalize duration-200 ease-linear rounded-md cursor-pointer;
+    }
+
+    .btn-primary{
+        @apply text-blackColor bg-secondaryColor hover:opacity-75;
+    }
+
+}
+
+@layer utilities{
+    .home_title,
+    .card_title ,
+    .section_title{
+        @apply text-4xl font-bold uppercase font-oswald lg:text-5xl;
+    }
+.card_title {
+    @apply text-xl ;
+}
+
+.section_title{
+    @apply text-3xl
+}
+    .separator{
+        @apply w-28 h-[2px] bg-secondaryColor my-5;
+    }
+    .paragraph{
+        @apply text-xs leading-5 text-paragraphColor;
+    }
+
+    .tabs_wrap ul li:hover,
+    .tabs_wrap ul li.active {
+@apply bg-secondaryColor text-blackColor;
+    }
+}
